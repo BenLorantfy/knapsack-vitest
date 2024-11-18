@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "target": "es2022",
+    "outDir": "lib"
+  },
+  "include": ["src/**/*.ts"]
+}
