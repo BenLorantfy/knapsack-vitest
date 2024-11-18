@@ -30,6 +30,6 @@ jobs:
           cd packages/knapsack-vitest
           npm install
           npm run build
-          cd ../packages/jest-example
+          cd ../jest-example
           npm install
-          node ../packages/knapsack-vitest/lib/knapsack-pro-jest.js --runInBand
+          node ../knapsack-vitest/lib/knapsack-pro-jest.js --runInBand
