@@ -1,0 +1,29 @@
+name: jest-example
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        ci_node_total: [2]
+        ci_node_index: [0, 1]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run tests
+        env:
+          KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST: ${{ secrets.KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST }}
+          KNAPSACK_PRO_CI_NODE_TOTAL: ${{ matrix.ci_node_total }}
+          KNAPSACK_PRO_CI_NODE_INDEX: ${{ matrix.ci_node_index }}
+        run: |
+          npm exec @knapsack-pro/jest --runInBand
