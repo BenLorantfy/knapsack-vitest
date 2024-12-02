@@ -2,7 +2,7 @@
   "name": "knapsack-vitest",
   "type": "module",
   "version": "1.0.0",
-  "description": "Knapsack Pro Vitest splits Vitest tests across CI nodes and makes sure that tests will run in optimal time on each CI node.",
+  "description": "knapsack-vitest splits Vitest tests across CI nodes and makes sure that tests will run in optimal time on each CI node.",
   "keywords": [
     "knapsack",
     "knapsack pro",
@@ -20,7 +20,7 @@
   "contributors": [],
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf lib && tsc && chmod u+x lib/knapsack-pro-vitest.js",
+    "build": "rm -rf lib && tsc && chmod u+x lib/knapsack-vitest.js",
     "lint": "npm run eslint:check && npm run prettier:check",
     "eslint:check": "eslint . --ext .ts",
     "eslint:format": "eslint . --ext .ts --fix",

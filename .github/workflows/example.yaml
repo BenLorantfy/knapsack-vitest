@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ci_node_index: [0, 1]
+        ci_node_index: [0, 1, 2, 3]
     name: test (${{ matrix.ci_node_index }})
 
     steps:
@@ -20,19 +20,27 @@ jobs:
         with:
           node-version: 20
 
+      - name: Build
+        working-directory: packages/knapsack-vitest
+        run: |
+          npm install
+          npm run build
+          npm link
+
+      - name: Link knapsack-vitest to example
+        working-directory: example
+        run: |
+          npm install
+          npm link knapsack-vitest
+
       - name: Run tests
+        working-directory: example
         env:
           KNAPSACK_PRO_COVERAGE_DIRECTORY: "coverage"
           KNAPSACK_PRO_TEST_FILE_PATTERN: "src/**/*.spec.ts"
           KNAPSACK_PRO_TEST_SUITE_TOKEN: ${{ secrets.KNAPSACK_PRO_TEST_SUITE_TOKEN }}
-          KNAPSACK_PRO_CI_NODE_TOTAL: 2
+          KNAPSACK_PRO_CI_NODE_TOTAL: 4
           KNAPSACK_PRO_CI_NODE_INDEX: ${{ matrix.ci_node_index }}
           KNAPSACK_PRO_LOG_LEVEL: "error"
-        run: |
-          cd packages/knapsack-vitest
-          npm install
-          npm run build
-          cd ../example
-          npm install
-          node ../knapsack-vitest/lib/knapsack-pro-vitest.js --coverage
+        run: knapsack-vitest --coverage
 
