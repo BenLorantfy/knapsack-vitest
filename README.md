@@ -1,6 +1,13 @@
-# knapsack-vitest
+# ![knapsack-vitest](./img/logo.png)
 
 Split your vitest test suite across multiple parrallel CI nodes with [Knapsack Pro](https://knapsackpro.com/) using this [custom integration](https://docs.knapsackpro.com/2020/how-to-build-native-integration-with-knapsack-pro-api-to-run-tests-in-parallel-for-any-test-runner-testing-framework).
+
+<p align="center">
+<a href="https://github.com/benlorantfy/knapsack-vitest/actions?query=branch%3Amain"><img src="https://github.com/benlorantfy/knapsack-vitest/actions/workflows/test.yaml/badge.svg?event=push&branch=main" alt="knapsack-vitest CI status" /></a>
+<a href="https://twitter.com/benlorantfy" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@benlorantfy-4BBAAB.svg" alt="Created by Ben Lorantfy"></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/benlorantfy/knapsack-vitest" alt="License"></a>
+</p>
+
 
 ## Getting Started
 1. Install the package
