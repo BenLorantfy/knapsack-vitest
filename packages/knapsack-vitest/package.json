@@ -5,7 +5,8 @@
   "description": "knapsack-vitest splits Vitest tests across CI nodes and makes sure that tests will run in optimal time on each CI node.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BenLorantfy/knapsack-vitest.git"
+    "url": "git+https://github.com/BenLorantfy/knapsack-vitest.git",
+    "directory": "packages/knapsack-vitest"
   },
   "keywords": [
     "knapsack",
