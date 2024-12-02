@@ -1,4 +1,4 @@
-# ![knapsack-vitest](./img/logo.png)
+# ![knapsack-vitest](https://github.com/BenLorantfy/knapsack-vitest/blob/main/img/logo.png?raw=true)
 
   <p align="center">
     Split your vitest test suite across multiple parrallel CI nodes with <a href="https://knapsackpro.com/">Knapsack Pro</a>
