@@ -8,7 +8,7 @@ import {
   TestFile,
 } from '@knapsack-pro/core';
 
-import { defineConfig, mergeConfig } from 'vitest/config'
+import { mergeConfig } from 'vitest/config'
 import { startVitest, parseCLI, UserConfig } from 'vitest/node'
 
 import { v4 as uuidv4 } from 'uuid';
@@ -25,9 +25,7 @@ const knapsackPro = new KnapsackProCore(
 );
 
 const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
-  console.log('queueTestFiles', queueTestFiles);
   const config = generateVitestConfig(queueTestFiles);
-  console.log('config', config);
   const vitest = await startVitest('test', undefined, config);
     
   if (!vitest) {
