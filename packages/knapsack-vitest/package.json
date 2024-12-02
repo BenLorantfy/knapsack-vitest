@@ -1,8 +1,12 @@
 {
   "name": "knapsack-vitest",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "knapsack-vitest splits Vitest tests across CI nodes and makes sure that tests will run in optimal time on each CI node.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenLorantfy/knapsack-vitest.git"
+  },
   "keywords": [
     "knapsack",
     "knapsack pro",
@@ -28,7 +32,7 @@
     "prettier:format": "prettier --config .prettierrc.json --write ."
   },
   "files": [
-    "/lib"
+    "lib"
   ],
   "bin": {
     "knapsack-vitest": "lib/knapsack-vitest.js"
