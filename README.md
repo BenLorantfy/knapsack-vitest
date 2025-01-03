@@ -1,3 +1,6 @@
+> [!WARNING]  
+> This package is deprecated. Please use the offical version [@knapsack-pro/vitest](https://docs.knapsackpro.com/vitest/guide/)
+
 # ![knapsack-vitest](./img/logo.png)
 
   <p align="center">
